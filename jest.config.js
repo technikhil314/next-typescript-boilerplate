@@ -8,7 +8,10 @@ module.exports = {
     },
   },
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
+  setupFilesAfterEnv: [
+    '<rootDir>/testSetup/setupTests.ts',
+    '<rootDir>/testSetup/msw.ts',
+  ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',

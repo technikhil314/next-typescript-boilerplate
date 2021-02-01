@@ -1,6 +1,6 @@
 # next-ts-boilerplate
 
-### Packages used
+### Dependancies
 
 1. Next v10.x
 1. Typescript v4.x

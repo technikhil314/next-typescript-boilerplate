@@ -75,6 +75,7 @@ module.exports = {
     // import rules
     'import/order': 'error',
     // react rules
+    'react/react-in-jsx-scope': 0,
     'react/prop-types': 'error',
     'react/sort-prop-types': 'error',
     'react/no-children-prop': 'error',
@@ -109,4 +110,7 @@ module.exports = {
     'public/**/*',
     'webpack.config.js',
   ],
+  globals: {
+    globalThis: 'writable',
+  },
 };
