@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "es2015",
+    "target": "ES2017",
     "jsx": "preserve",
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -18,7 +18,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "checkJs": true,
+    "checkJs": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noUnusedLocals": true
@@ -29,6 +29,7 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "**/*.js"
   ]
 }

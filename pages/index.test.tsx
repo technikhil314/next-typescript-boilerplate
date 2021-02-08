@@ -1,5 +1,5 @@
 import { act, render, screen, waitFor } from '@testing-library/react';
-import App from '../pages/index';
+import App from './index.page';
 
 describe('App', () => {
   it('renders without crashing', async () => {

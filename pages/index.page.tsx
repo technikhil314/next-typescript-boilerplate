@@ -1,13 +1,14 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-export async function getStaticProps(context: any) {
-  const res = await fetch(`http://jsonplaceholder.typicode.com/posts`);
+import Head from 'next/head';
+import React, { useEffect, useState } from 'react';
+
+export async function getStaticProps(): Promise<any> {
+  const res = await fetch('http://jsonplaceholder.typicode.com/posts');
   const data = await res.json();
 
   if (!data) {
     return {
       redirect: {
-        destination: "/",
+        destination: '/',
         permanent: false,
       },
     };
@@ -20,11 +21,11 @@ export async function getStaticProps(context: any) {
   };
 }
 
-export default function Home(props: any) {
+export default function Home(props: any): React.FC {
   const [data, setData] = useState(props.data);
-  useEffect(() => {
-    const getData = async () => {
-      const res = await fetch(`http://jsonplaceholder.typicode.com/posts/10`);
+  useEffect((): void => {
+    const getData = async (): Promise<void> => {
+      const res = await fetch('http://jsonplaceholder.typicode.com/posts/10');
       const data = await res.json();
       setData(data);
     };

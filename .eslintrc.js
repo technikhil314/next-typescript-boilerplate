@@ -109,6 +109,7 @@ module.exports = {
     'dist/**/*',
     'public/**/*',
     'webpack.config.js',
+    '**/*.config.js',
   ],
   globals: {
     globalThis: 'writable',
