@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactElement } from 'react';
 
 export async function getStaticProps(): Promise<any> {
   const res = await fetch('http://jsonplaceholder.typicode.com/posts');
@@ -21,7 +21,7 @@ export async function getStaticProps(): Promise<any> {
   };
 }
 
-export default function Home(props: any): React.FC {
+export default function Home(props: any): ReactElement {
   const [data, setData] = useState(props.data);
   useEffect((): void => {
     const getData = async (): Promise<void> => {
